@@ -2,12 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-dark: #1B3C53;
-  --color-medium: #456882;
-  --color-accent: #D2C1B6;
-  --color-light: #F9F3EF;
-
-  --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
-}
