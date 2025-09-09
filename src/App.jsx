@@ -6,8 +6,8 @@ export default function App() {
   const [opacity, setOpacity] = useState(1);
   const [unlocked, setUnlocked] = useState(false);
 
-  const progressRef = useRef(0);       // 0..1 progress of "reveal"
-  const touchStartRef = useRef(null);  // for touch handling
+  const progressRef = useRef(0); // 0..1 progress of "reveal"
+  const touchStartRef = useRef(null); // for touch handling
 
   useEffect(() => {
     const body = document.body;
@@ -16,7 +16,7 @@ export default function App() {
 
     // adjust sensitivity here (higher -> need more scroll to finish)
     const SENSITIVITY = 800; // px of drag to reach full reveal
-    const BLUR_START = 20;    // starting blur in px
+    const BLUR_START = 20; // starting blur in px
 
     const setVisualsFromProgress = (p) => {
       // p is 0..1
@@ -36,7 +36,10 @@ export default function App() {
 
     const increaseProgressBy = (delta) => {
       // delta is positive for downward gestures
-      progressRef.current = Math.min(Math.max(progressRef.current + delta / SENSITIVITY, 0), 1);
+      progressRef.current = Math.min(
+        Math.max(progressRef.current + delta / SENSITIVITY, 0),
+        1
+      );
       const p = progressRef.current;
       setVisualsFromProgress(p);
       if (p >= 1) tryUnlock();
@@ -84,41 +87,78 @@ export default function App() {
   }, []);
 
   return (
-    <div>
-      {/* Hero overlay (fixed). Hidden once unlocked */}
+    <>
+      {/* Hero Overlay */}
       {!unlocked && (
-        <section
-          className="hero"
-          style={{
-            backdropFilter: `blur(${blur}px)`,
-            WebkitBackdropFilter: `blur(${blur}px)`,
-            opacity: opacity,
-          }}
-        >
+        <section className="hero" style={{ opacity }}>
           <h1 className="hero-title">Hi, I’m Justine 👋</h1>
           <p className="hero-subtitle">A passionate web developer.</p>
-          <p className="hint">Scroll (or swipe) down to reveal →</p>
+          <p className="hero-hint">Scroll down to unlock more!</p>
         </section>
       )}
 
-      {/* content behind the hero */}
-      
-      <main>
-        <section className="about">
-          <h2>About Me</h2>
-          <p>I’m a web developer who enjoys building modern, user-friendly apps.</p>
-        </section>
+      {/* CONTENT WRAPPER with blur */}
+      <div
+        className="content-wrapper"
+        style={{
+          filter: !unlocked ? `blur(${blur}px)` : "none",
+          transition: "filter 0.5s ease",
+        }}
+      >
+        <main>
+          {/* About Section */}
+          <section className="about">
+            <div className="about-container">
+              <div className="about-photo">
+                <img src="src\assets\image copy.png" alt="Me 2" />
+              </div>
 
-        <section className="projects">
-          <h2>Projects</h2>
-          <p>Portfolio Website, Smart Storage App, Weather Dashboard</p>
-        </section>
+              {/* Text + Socials */}
+              <div className="about-text">
+                <h2 className="about-name">JUSTINE ANGELO A. DE VERA</h2>
+                <p className="about-description">
+                  I’m a web developer passionate about building modern,
+                  user-friendly apps. I focus on clean UI, smooth user
+                  experiences, and creating solutions that are both intuitive
+                  and efficient.
+                </p>
 
-        <section className="contact">
-          <h2>Contact</h2>
-          <p>justine@example.com</p>
-        </section>
-      </main>
-    </div>
+                <div className="socials">
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="/icons/facebook.svg" alt="Facebook" />
+                  </a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="/icons/linkedin.svg" alt="LinkedIn" />
+                  </a>
+                  <a href="https://github.com" target="_blank" rel="noreferrer">
+                    <img src="/icons/github.svg" alt="GitHub" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Projects */}
+          <section className="projects">
+            <h2>Projects</h2>
+            <p>Portfolio Website, Smart Storage App, Weather Dashboard</p>
+          </section>
+
+          {/* Contact */}
+          <section className="contact">
+            <h2>Contact</h2>
+            <p>justine@example.com</p>
+          </section>
+        </main>
+      </div>
+    </>
   );
 }

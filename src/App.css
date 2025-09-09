@@ -1,8 +1,24 @@
+/* Apply to both html and body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll; /* ensures consistent layout */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge Legacy */
+}
+
+/* Chrome, Safari, Edge */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
-  --color-dark: #1B3C53;
+  --color-dark: #1b3c53;
   --color-medium: #456882;
-  --color-accent: #D2C1B6;
-  --color-light: #F9F3EF;
+  --color-accent: #d2c1b6;
+  --color-light: #f9f3ef;
 }
 
 body {
@@ -21,29 +37,45 @@ section {
 }
 
 .hero {
-  position: fixed;
-  inset: 0;
+  position: fixed; /* stays on top of everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* full screen */
+  background: rgba(27, 60, 83, 0.4);
+  backdrop-filter: blur(15px);
+  color: var(--color-light);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  z-index: 999; /* above the content */
+  transition: opacity 0.5s ease;
 
-  background: rgba(27,60,83,0.6);
-  color: var(--color-light);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.hero-content {
   text-align: center;
-
-  /* transition for opacity; backdropFilter updates smoothly as JS changes it */
-  transition: opacity 180ms linear;
-  pointer-events: auto; /* overlay captures events while active */
 }
 
-/* optional small hint */
-.hero .hint {
-  margin-top: 1.25rem;
-  font-size: 0.9rem;
-  color: rgba(242,238,234,0.9);
+.hero-title {
+  font-size: 3rem;
+  margin: 0;
 }
 
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--color-accent);
+}
+
+.hero-hint {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-light);
+  opacity: 0.8;
+}
 
 main > section {
   padding: 4rem 2rem;
@@ -64,8 +96,77 @@ main > section {
   color: var(--color-accent);
 }
 
+/* ABOUT SECTION LAYOUT */
 .about {
   background: var(--color-medium);
   color: var(--color-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.about-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  align-items: center;
+}
+
+.carousel {
+  position: relative;
+  width: 225px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-photo {
+  width: 225px; /* fixed width */
+  height: 400px; /* fixed height for 9:16 ratio */
+  overflow: hidden; /* crop any overflow */
+  border-radius: 8px; /* optional rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* optional shadow */
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* keeps aspect ratio, fills container */
+  aspect-ratio: 9/16; /* ensures 9:16 ratio even if container changes */
+}
+
+/* TEXT */
+.about-text {
+  flex: 1;
+}
+
+.about-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1); /* makes them white */
+  transition: transform 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+}
