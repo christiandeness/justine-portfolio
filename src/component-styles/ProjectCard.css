@@ -1,0 +1,76 @@
+.project-card {
+  background: linear-gradient(135deg, #f5f7fa, #e4ebf7); /* soft gradient */
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  padding: 1.2rem;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03); /* lift + subtle zoom */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc); /* fun hover gradient */
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05); /* image zoom on hover */
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0d47a1; /* darker blue */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.project-link {
+  margin-top: auto;
+  color: #ff4081; /* bright accent */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #e91e63;
+  text-decoration: underline;
+}
+
+/* Optional: playful hover overlay */
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.08);
+  transform: rotate(45deg);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  transform: rotate(45deg) translate(10%, 10%);
+}
