@@ -1,0 +1,37 @@
+.skills {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill-badge {
+  background: linear-gradient(135deg, #e0f7fa, #b3e5fc);
+  color: #0d47a1;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-badge:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .skill-badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
