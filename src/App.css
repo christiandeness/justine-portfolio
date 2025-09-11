@@ -13,10 +13,10 @@ body::-webkit-scrollbar {
 }
 
 :root {
-  --color-dark: #1b3c53;
-  --color-medium: #456882;
-  --color-accent: #d2c1b6;
-  --color-light: #f9f3ef;
+  --color-dark: #2e2e2e;
+  --color-medium: #3A7D9A;
+  --color-accent: #D9BCA3;
+  --color-light: #E0E0E0;
 }
 
 body {
