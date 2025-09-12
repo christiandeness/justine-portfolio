@@ -1,6 +1,7 @@
 .skills {
   padding: 2rem 1rem;
   text-align: center;
+  font-family: 'Righteous';
 }
 
 .skills h2 {
@@ -26,7 +27,8 @@
 }
 
 .skill-badge:hover {
-  transform: scale(1.1);
+  transform: scale(1.4);
+  color: #ff4081;
 }
 
 @media (max-width: 480px) {

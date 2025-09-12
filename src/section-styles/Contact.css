@@ -1,8 +1,9 @@
 .contact-footer {
-  background: #0d47a1;
-  color: #fff;
-  padding: 2rem 1rem;
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: 2rem 1rem;;
   text-align: center;
+  font-family: 'Righteous';
 }
 
 .contact-container {

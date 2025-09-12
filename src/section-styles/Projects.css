@@ -3,6 +3,7 @@
   color: var(--color-medium);
   flex-direction: column;
   padding-top: 1rem ;
+  font-family: 'Righteous';
 }
 
 .projects-grid {

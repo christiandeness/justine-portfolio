@@ -1,6 +1,7 @@
 .achievements {
   padding-top: 0;
   padding-bottom: 2rem;
+  font-family: 'Righteous';
 }
 .achievements-grid {
   display: grid;
