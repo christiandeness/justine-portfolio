@@ -8,6 +8,9 @@
   font-family: "Righteous";
   overflow: hidden;
   min-height: 100vh;
+  border-style: double;
+  border-width: 10px; /* 👈 adjust thickness */
+  border-color: #fff; /* optional, makes it visible */
 }
 
 .star-canvas {

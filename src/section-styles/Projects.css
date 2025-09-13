@@ -1,9 +1,12 @@
 .projects {
-  background: var(--color-accent);
+  background: var(--color-light);
   color: var(--color-medium);
   flex-direction: column;
   padding-top: 1rem ;
   font-family: 'Righteous';
+  border-style: double;
+  border-width: 10px; /* 👈 adjust thickness */
+  border-color: #fff; /* optional, makes it visible */
 }
 
 .projects-grid {

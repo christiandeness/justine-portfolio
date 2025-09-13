@@ -2,6 +2,9 @@
   padding: 2rem 1rem;
   text-align: center;
   font-family: 'Righteous';
+  border-style: double;
+  border-width: 10px; /* 👈 adjust thickness */
+  border-color: #fff; /* optional, makes it visible */
 }
 
 .skills h2 {

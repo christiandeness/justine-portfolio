@@ -2,6 +2,9 @@
   padding-top: 0;
   padding-bottom: 2rem;
   font-family: 'Righteous';
+  border-style: double;
+  border-width: 10px; /* 👈 adjust thickness */
+  border-color: #fff; /* optional, makes it visible */
 }
 .achievements-grid {
   display: grid;
@@ -27,7 +30,7 @@
 .achievement-card h3 {
   margin-top: 0;
   font-size: 1.8rem;
-  color: #e65100;
+  color: #333;
 }
 
 .achievement-card p {
