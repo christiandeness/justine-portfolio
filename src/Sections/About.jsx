@@ -37,8 +37,8 @@ export default function About() {
 
     // parallax on mouse move
     function moveStars(e) {
-      const offsetX = (e.clientX / w - 0.5) * 5;
-      const offsetY = (e.clientY / h - 0.5) * 5;
+      const offsetX = (e.clientX / w - 0.5) * 75;
+      const offsetY = (e.clientY / h - 0.5) * 75;
       ctx.clearRect(0, 0, w, h);
       ctx.fillStyle = "white";
       stars.forEach((s) => {
