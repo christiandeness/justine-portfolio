@@ -2,7 +2,7 @@ import React from "react";
 import { Facebook, Linkedin, Github } from "lucide-react";
 import "../section-styles/About.css";
 import { useEffect, useRef } from "react";
-import image from "./assets/image.png";
+import image from "../assets/image.png";
 
 export default function About() {
   const canvasRef = useRef(null);
@@ -66,7 +66,7 @@ export default function About() {
       <canvas ref={canvasRef} className="star-canvas"></canvas>
       <div className="about-container">
         <div className="about-photo">
-          <img src={myPhoto} alt="Me" />
+          <img src={image} alt="Me" />
         </div>
         <div className="about-text">
           <h2 className="about-name">JUSTINE ANGELO A. DE VERA</h2>
