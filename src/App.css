@@ -44,23 +44,24 @@ body {
   transition: opacity 0.5s ease;
   padding: 1rem;
   box-sizing: border-box;
+  font-family: "Oswald";
 }
 
 .hero-title {
-  font-size: clamp(1.8rem, 8vw, 3rem); /* scales from small to large phones */
+  font-size: clamp(5rem, 10vw, 5rem); /* scales from small to large phones */
   margin: 0;
   text-align: center;
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(3rem, 5vw, 2.5rem);
   margin-top: 1rem;
   text-align: center;
   color: var(--color-light);
 }
 
 .hero-hint {
-  font-size: clamp(0.8rem, 3vw, 1rem);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin-top: 1rem;
   text-align: center;
   color: var(--color-light);
