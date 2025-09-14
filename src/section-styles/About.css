@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Oswald";
+  font-family: "Raleway";
   overflow: hidden;
   height: 86vh;
   border-style: double;
@@ -53,14 +53,15 @@
 
 .about-name {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .about-description {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 
 .socials {

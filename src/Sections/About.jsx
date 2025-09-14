@@ -69,7 +69,7 @@ export default function About() {
           <img src={image} alt="Me" />
         </div>
         <div className="about-text">
-          <h2 className="about-name">JUSTINE ANGELO A. DE VERA</h2>
+          <h2 className="about-name">Justine Angelo A. De Vera</h2>
           <p className="about-description">
             I’m a web developer 💻 passionate about building modern,
             user-friendly apps. I focus on clean UI 🎨, smooth user
