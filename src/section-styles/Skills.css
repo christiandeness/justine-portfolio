@@ -1,7 +1,7 @@
 .skills {
   padding: 2rem 1rem;
   text-align: center;
-  font-family: "Oswald";
+  font-family: "Raleway";
   border-style: double;
   border-width: 10px; /* 👈 adjust thickness */
   border-color: #fff; /* optional, makes it visible */
@@ -11,6 +11,7 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   margin-top: 0;
+  font-weight: 500;
 }
 
 .skills-grid {
@@ -25,7 +26,7 @@
   color: #0d47a1;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }

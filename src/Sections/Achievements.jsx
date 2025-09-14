@@ -5,7 +5,7 @@ import "../section-styles/Achievements.css";
 export default function Achievements({ achievements }) {
   return (
     <section className="achievements">
-      <h1>Achievements 🏆</h1>
+      <h2>Achievements 🏆</h2>
       <div className="achievements-grid">
         {achievements.map((ach, index) => (
           <AchievementCard
