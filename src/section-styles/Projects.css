@@ -3,7 +3,7 @@
   color: var(--color-medium);
   flex-direction: column;
   padding-top: 1rem ;
-  font-family: 'Righteous';
+  font-family: "Oswald";
   border-style: double;
   border-width: 10px; /* 👈 adjust thickness */
   border-color: #fff; /* optional, makes it visible */
@@ -29,7 +29,8 @@
 }
 
 .projects h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-dark);
   padding-top: 0;
+  margin: 1rem 0;
 }

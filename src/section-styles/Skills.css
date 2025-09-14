@@ -1,15 +1,16 @@
 .skills {
   padding: 2rem 1rem;
   text-align: center;
-  font-family: 'Righteous';
+  font-family: "Oswald";
   border-style: double;
   border-width: 10px; /* 👈 adjust thickness */
   border-color: #fff; /* optional, makes it visible */
 }
 
 .skills h2 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
+  margin-top: 0;
 }
 
 .skills-grid {
@@ -25,12 +26,12 @@
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
 
 .skill-badge:hover {
-  transform: scale(1.4);
+  transform: scale(1.9);
   color: #ff4081;
 }
 

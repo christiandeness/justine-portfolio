@@ -5,9 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Righteous";
+  font-family: "Oswald";
   overflow: hidden;
-  min-height: 100vh;
+  height: 86vh;
   border-style: double;
   border-width: 10px; /* 👈 adjust thickness */
   border-color: #fff; /* optional, makes it visible */
@@ -52,13 +52,13 @@
 }
 
 .about-name {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .about-description {
-  font-size: 1.1rem;
+  font-size: 1.9rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }

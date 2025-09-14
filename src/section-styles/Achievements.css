@@ -1,7 +1,8 @@
 .achievements {
   padding-top: 0;
   padding-bottom: 2rem;
-  font-family: 'Righteous';
+  font-family: "Oswald";
+  font-size: 1.5rem;
   border-style: double;
   border-width: 10px; /* 👈 adjust thickness */
   border-color: #fff; /* optional, makes it visible */
@@ -29,13 +30,13 @@
 
 .achievement-card h3 {
   margin-top: 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #333;
 }
 
 .achievement-card p {
   color: #333;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 900px) {
