@@ -44,13 +44,14 @@ body {
   transition: opacity 0.5s ease;
   padding: 1rem;
   box-sizing: border-box;
-  font-family: "Oswald";
+  font-family: "Raleway";
 }
 
 .hero-title {
   font-size: clamp(5rem, 10vw, 5rem); /* scales from small to large phones */
   margin: 0;
   text-align: center;
+  font-weight: 500;
 }
 
 .hero-subtitle {
@@ -58,6 +59,7 @@ body {
   margin-top: 1rem;
   text-align: center;
   color: var(--color-light);
+  font-weight: 300;
 }
 
 .hero-hint {
@@ -66,6 +68,7 @@ body {
   text-align: center;
   color: var(--color-light);
   opacity: 0.8;
+  font-weight: 200;
 }
 
 /* Main sections */
